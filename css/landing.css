@@ -117,7 +117,6 @@ header{
     font-size: 18px;
     border-radius: 5px;
 }
-
 .products {
     display: flex;
     justify-content: center;
@@ -155,7 +154,112 @@ header{
     color: #DDA74F;
     font-size: 16px;
 }
-
+/*services section*/
+.services {
+    width: 100%;
+    height: 70vh;
+    background-color: #0B0B0D;
+    text-align: center;
+    padding: 60px 20px;
+}
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.services h2 {
+    font-size: 32px;
+    color: #FF9800;
+    margin-bottom: 20px;
+}
+.services p {
+    font-size: 18px;
+    color: #A76B09;
+    margin-bottom: 40px;
+}
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.service-card {
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+}
+.service-card i {
+    font-size: 40px;
+    color: #DDA74F;
+    margin-bottom: 10px;
+}
+.service-card h3 {
+    font-size: 24px;
+    color: #FF9800;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.service-card p {
+    font-size: 16px;
+    color: wheat;
+}
+/*offers section*/
+.offers {
+    text-align: center;
+    padding: 50px 20px;
+    background: #0B0B0D;
+}
+.offers h2{
+    font-size: 32px;
+    color: #FF9800;
+    margin-bottom: 20px;
+}
+.offers p{
+    font-size: 18px;
+    color: #A76B09;
+    margin-bottom: 40px;
+}
+.offer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.offer-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+.offer-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.offer-card h3 {
+    margin: 10px 0;
+    color: #FF9800;
+}
+.offer-card p {
+    font-size: 14px;
+    color: wheat;
+}
+.offer-card button {
+    background: #faca7e;
+    color: #222;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.offer-card button:hover {
+    background: #FF9800;
+}
 @media(max-width:900px){
     .home h1 {
         font-size: 50px;
@@ -196,7 +300,9 @@ header{
         background-color: #FF9800;
         color: #222;
     }
-
+    .Menu {
+        height: 280vh;
+    }
     .categories {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -216,13 +322,21 @@ header{
         text-align: center;
         width: 100%;
     }
-
     .products {
         flex-direction: column;
         align-items: center; 
     }
-
     .card {
         width: 80%;
+    }
+    .services {
+        height: 140vh;
+      }
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        max-width: 90%;
     }
 }
