@@ -14,14 +14,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
 </head>
 
 <body>
     <!-- Header Start -->
     <header>
-        <div id="navbar">
+        <!-- <div id="navbar"> -->
             
-            <nav role="navigation">
+            <!-- <nav role="navigation">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -30,17 +32,18 @@
 
                 </ul>
             </nav>
-        </div>
+        </div> -->
         <div class="content">
-            <h1>Welcome To <span class="primary-text"> Royal Food </span> Restaurant</h1>
+            <h1>Welcome To <span class="primary-text"> Royal Food </span> Menu</h1>
             <p>Here you can find Most delicacies food in the world</p>
-            <a href="#contact" class="btn btn-primary">Book a Table</a>
+            
+            <a href="#menu" class="btn btn-primary">All menu</a>
         </div>
     </header>
     <!-- Header End -->
     <main>
         <!-- About Section Start -->
-        <section id="about">
+        <!-- <section id="about">
             <div class="container">
                 <div class="title">
                     <h2>The Royal Food history</h2>
@@ -54,38 +57,43 @@
                     <img src="../image/about_img.png" alt="Pizza">
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- About Section End -->
         <!-- Offers Section Start -->
         <section id="offers">
-            <div class="container">
-                <div class="title">
+            <div class="  cont">
+                <div class="title mt-5">
                     <h2>Our Special Offers</h2>
                     <p>More than 25+ years of experience</p>
                 </div>
-                <div class="offers-items">
-                    <div>
-                        <img src="../image/offer1.png" alt="Quattro Pasta">
+                <div class="offers-items ">
+                    <div class=" items-center md:block flex">
+                        <img  src="../image/offer1.png" alt="Quattro Pasta">
                         <div>
                             <h3>TOMATO PASTA</h3>
                             <p>Pasta with tomato sauce, cherry tomatoes and parsley.</p>
+                            
                             <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
+                            <button  onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
+                            
                         </div>
                     </div>
-                    <div>
+                    <div class="items-center md:block flex">
                         <img src="../image/offer2.png" alt="Vegertarian Pasta">
                         <div>
                             <h3>Vegertarian Pasta</h3>
                             <p>pasta with grilled vegetables, tomatoes, cheese, olives, lettuce, broccoli.</p>
                             <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
+                            <button onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                    <div>
+                    <div class="items-center md:block flex">
                         <img src="../image/offer3.png" alt="Quattro Pasta">
                         <div>
                             <h3>Basil Pasta</h3>
                             <p>pasta with tomato sauce, grilled halloumi cheese and fresh basil.</p>
                             <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
+                            <button onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -96,20 +104,92 @@
         <section id="menu">
             <div class="container">
                 <div class="title">
-                    <h2>Our Special Menu</h2>
-                    <p>Order two and get third for free</p>
+                    <h2>Our Special Menu </h2>
                         <!-- Search Bar-->
+                        <input type="text"  id="search" placeholder="Search by Name 🍕🍔🍟">
+                        <p>Order two and get third for free ❕</p>
                     <div class="controls">
-                        <input type="text" id="search" placeholder="Search by Name">
                         <div class="order-sidebar">
-                            <h2>🛒 طلباتك</h2>
+                            <h2>Your Orders 🛒 </h2>
                             <div id="order-items"></div>
                             <hr>
-                            <p>$المجموع: <span id="total">0</span> </p>
+                            <p>Total: <span id="total">0</span>$ </p>
                         </div>
                     
                     </div>
                 </div>
+                <div class="products grid flex grid-col-4 mb-5">
+                    <div class="card col-span-1 ">
+                        <img src="../image/ceaser1.jpg">
+                        <h3>Ceaser Salad</h3>
+                        <p class="text-sm ">Romaine Lettuce,Caesar Dressing, Croutons,Parmesan Cheese.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 10$</p> 
+                        <button onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="card col-span-1 ">
+                    <img src="../image/pizza1.jpg">
+                    <h3>Pizza</h3>
+                    <p class="text-sm ">pizza sauce, olives, mushrooms, corn, mozzarella cheese, peppers.</p>
+                    <div class="flex mt-2 justify-between ">
+                    <p class="p1">price: 15$</p> <button onclick="addToOrder('Pizza', 15.00)"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="card col-span-1 ">
+                <img src="../image/pasta.jpg">
+                <h3>Pasta</h3>
+                <p class="text-sm ">tomato sauce, onion, meat, corn, mozzarella cheese, peppers.</p>
+                <div class="flex mt-2 justify-between ">
+                <p class="p1">price: 20$</p> <button onclick="addToOrder('Pasta', 20.00)"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+            <div class="card col-span-1 ">
+                <img src="../image/burger1.jpg">
+                <h3>Beef Burger</h3>
+                <p class="text-sm "> Beef,  Bun, mozzarella cheese, Tomato, Onion, Bacon.</p>
+                <div class="flex mt-2 justify-between ">
+                <p class="p1">price: 17$</p> <button onclick="addToOrder('Beef Burger', 17.00)"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+                </div>
+                <div class="products grid flex grid-col-4 mb-5">
+                    
+                    <div class="card col-span-1 ">
+                        <img src="../image/saladpasta.jpg">
+                        <h3>Pasta Salad</h3>
+                        <p class="text-sm ">pasta, cabbage, bell peppers, tomatoes, olives, cheese.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 11$</p> <button onclick="addToOrder('Pasta Salad', 11.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card col-span-1 ">
+                        <img src="../image/shrimp.jpg">
+                        <h3>fried shrimp</h3>
+                        <p class="text-sm ">garlic, ginger, lemon, shrimp, coriander, barbecue sauce.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 20$</p> <button onclick="addToOrder('fried shrimp', 20.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card col-span-1 ">
+                        <img src="../image/steak.jpg">
+                        <h3>GRILLED STEAK</h3>
+                        <p class="text-sm ">fresh steak, roasted potatoes, rosemary, butter, salt, garlic.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 24$</p> <button onclick="addToOrder('GRILLED STEAK', 24.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card col-span-1 ">
+                        <img src="../image/seasoap.jpg">
+                        <h3>Sea food Soup</h3>
+                        <p class="text-sm ">octopus, fish, shrimp, calamari, clams, garlic, butter, cooking cream.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 22$</p> <button onclick="addToOrder('Sea food Soup', 22.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
                 <div class="menu-items">
                     <div class="menu-item-left">
                         <div class="menu-item" >
@@ -248,7 +328,7 @@
         <!-- Gallery Section Start -->
         <section id="gallery">
             <div class="container">
-                <h2>Our Food Gallery</h2>
+                <h2 class="text-black">Our Food Gallery</h2>
                 <div class="img-gallery">
                     <img src="../image/gallery1.jpeg" alt="gallery1">
                     <img src="../image/e99c963d776c8771c68b30e946cbbda42860ceef.jpg" alt="gallery2">
@@ -261,7 +341,7 @@
         </section>
         <!-- Gallary Section End -->
         <!-- Contact Section Start -->
-        <section id="contact">
+        <!-- <section id="contact">
             <div class="container">
                 <div class="contact-content">
                     <div class="contact-info">
@@ -279,7 +359,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Contact Section End -->
          
         <script src="../JS/menu.js"> </script>
