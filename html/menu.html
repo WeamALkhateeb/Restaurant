@@ -73,8 +73,8 @@
                             <h3>TOMATO PASTA</h3>
                             <p>Pasta with tomato sauce, cherry tomatoes and parsley.</p>
                             
-                            <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
-                            <button  onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
+                            <p><del>$ 20.00</del> <span class="primary-text">$12.00</span></p>
+                            <button  onclick="addToOrder('TOMATO PASTA', 12.00)"><i class="fa-solid fa-plus"></i></button>
                             
                         </div>
                     </div>
@@ -83,8 +83,8 @@
                         <div>
                             <h3>Vegertarian Pasta</h3>
                             <p>pasta with grilled vegetables, tomatoes, cheese, olives, lettuce, broccoli.</p>
-                            <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
-                            <button onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
+                            <p><del>$ 15.00</del> <span class="primary-text">$10.00</span></p>
+                            <button onclick="addToOrder('Vegertarian Pasta', 10.00)"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                     <div class="items-center md:block flex">
@@ -92,8 +92,8 @@
                         <div>
                             <h3>Basil Pasta</h3>
                             <p>pasta with tomato sauce, grilled halloumi cheese and fresh basil.</p>
-                            <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
-                            <button onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
+                            <p><del>$ 25.00</del> <span class="primary-text">$15.00</span></p>
+                            <button onclick="addToOrder('Basil Pasta', 15.00)"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -189,117 +189,90 @@
                     </div>
                     
                 </div>
-                
-                <div class="menu-items">
-                    <div class="menu-item-left">
-                        <div class="menu-item" >
-                            <img src="../image/food1.png" alt="LASAL Cheese">
-                            <div>
-                                <h3>LASAL CHEESE <span class="primary-text">$18.00</span></h3>
-                                <p>pasta, cabbage, bell peppers, tomatoes, olives, cheese.</p>
-                                <button onclick="addToOrder('LASAL CHEESE', 18.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/food2.png" alt="JUMBO CRAB SHRIMP">
-                            <div>
-                                <h3>fried shrimp <span class="primary-text">$24.00</span></h3>
-                                <p>garlic, ginger, lemon, shrimp, coriander, barbecue sauce.</p>
-                                <button onclick="addToOrder('fried shrimp', 24.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item" >
-                            <img src="../image/food3.png" alt="KOKTAIL JUCIE">
-                            <div>
-                                <h3>fruit cocktail <span class="primary-text">$12.00</span></h3>
-                                <p>strawberries, kiwi, cherries, banana, cranberries, mil;, sugar.</p>
-                                <button onclick="addToOrder('fruit cocktail', 12.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item" >
-                            <img src="../image/food4.png" alt="CAPO STEAK">
-                            <div>
-                                <h3>grilled lamb chops <span class="primary-text">$60.00</span></h3>
-                                <p>olive oil, rosemary, salt, pepper, grilled vegetables.</p>
-                                <button onclick="addToOrder('grilled lamb chops', 60.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/food5.png" alt="ORGANIC FRUIT SALAD">
-                            <div>
-                                <h3>donuts <span class="primary-text">$8.00</span></h3>
-                                <p>fried donut dough filled with chocolate, strawberries, caramel.</p>
-                                <button onclick="addToOrder('donuts', 8.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/food6.png" alt="CHEESE PIZZA">
-                            <div>
-                                <h3>VEGETABLE PIZZA <span class="primary-text">$18.00</span></h3>
-                                <p>pizza sauce, olives, mushrooms, corn, mozzarella cheese, peppers, basil.</p>
-                                <button onclick="addToOrder('VEGETABLE PIZZA', 18.00)">add</button>
-                            </div>
+                <div class="products grid flex lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-5 gap-6">
+                    
+                    <div class="card flex flex-col col-span-1 mx-auto ">
+                        <img src="../image/soap1.jpg">
+                        <h3>VEGETABLE SOUP</h3>
+                        <p class="text-sm ">pzucchini, onion, carrot, tomato, potato, beansو chicken broth.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 9$</p> <button onclick="addToOrder('VEGETABLE SOUP', 9.00)"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                    <div class="menu-item-right">
-                        <div class="menu-item">
-                            <img src="../image/food7.jpeg" alt="KOFTA MEAT">
-                            <div>
-                                <h3>VEGETABLE SOUP <span class="primary-text">$40.00</span></h3>
-                                <p>zucchini, onion, carrot, tomato, potato, chicken broth.</p>
-                                <button onclick="addToOrder('VEGETABLE SOUP', 40.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/food8.jpeg" alt="SPANISH PIES">
-                            <div>
-                                <h3>PANCAKE <span class="primary-text">$14.00</span></h3>
-                                <p>pancake batter with butter, chocolate, blueberries, honey, strawberries.</p>
-                                <button onclick="addToOrder('PANCAKE', 14.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/food9.jpeg" alt="CHEESE TOST">
-                            <div>
-                                <h3> TOAST <span class="primary-text">$6.00</span></h3>
-                                <p>toast with butter, blueberries, banana, cinnamon, honey.</p>
-                                <button onclick="addToOrder('TOAST', 6.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/48556-طريقة-عمل-السينابون-(3).jpg" alt="cinnabon roll">
-                            <div>
-                                <h3>FRIED VEGETABLES <span class="primary-text">$14.00</span></h3>
-                                <p>cinnabon dough, butter, cinnamon, sweetened condensed milk, cream.</p>
-                                <button onclick="addToOrder('FRIED VEGETABLES', 14.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/food11.jpeg" alt="CHICKEN SHAWARMA">
-                            <div>
-                                <h3>GRILLED STEAK <span class="primary-text">$20.00</span></h3>
-                                <p>fresh steak, roasted potatoes, rosemary, butter, salt, garlic.</p>
-                                <button onclick="addToOrder('GRILLED STEAK', 20.00)">add</button>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="../image/الصورة-الرئيسية-لوصفةطريقة-عمل-شوربة-السي-فود-المصرية.jpg" alt="">
-                            <div>
-                                <h3>seafood soup <span class="primary-text">$30.00</span></h3>
-                                <p>octopus, fish, shrimp, calamari, clams, garlic, butter, cooking cream.</p>
-                                <button onclick="addToOrder('seafood soup', 30.00)">add</button>
-                            </div>
+                    <div class="card flex flex-col col-span-1 ">
+                        <img src="../image/salad.jpg">
+                        <h3>Salad</h3>
+                        <p class="text-sm ">Tomato, ginger, lemon, cucumber, cabbage, avocado, oil.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 4$</p> <button onclick="addToOrder('Salad', 20.00)"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
+                    <div class="card flex flex-col col-span-1 ">
+                        <img src="../image/bbq.jpg">
+                        <h3>BBQ</h3>
+                        <p class="text-sm ">botato, Shish, slice of meat, tomato, eggplantو wings.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 40$</p> <button onclick="addToOrder('BBQ', 40.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col col-span-1 ">
+                        <img src="../image/pepperoni.jpg">
+                        <h3>Pizza Pepperoni</h3>
+                        <p class="text-sm ">octopus, fish, shrimp, calamari, clams, garlic, butter, cooking cream.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 19$</p> <button onclick="addToOrder('Pizza Pepperoni', 19.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    
                 </div>
-                <button class="btn btn-third"><a href="#">EXPLORE FULL MENU</a></button>
+                <div class="products grid flex lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-5 gap-6">
+                    
+                    <div class="card flex flex-col col-span-1 mx-auto ">
+                        <img src="../image/wings1.jpg">
+                        <h3>Chicken Wings</h3>
+                        <p class="text-sm ">  Mustard, Barbecue sauce, chicken wings, onion.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 19$</p> <button onclick="addToOrder('Chicken Wings', 9.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col col-span-1 ">
+                        <img src="../image/crispy1.jpg">
+                        <h3>Crispy</h3>
+                        <p class="text-sm ">Tomato, ginger, lemon, cucumber, cabbage, avocado, oil.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 14$</p> <button onclick="addToOrder('Crispy', 14.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                
+                    <div class="card flex flex-col col-span-1 ">
+                        <img src="../image/FISH.jpg">
+                        <h3>Fried fish</h3>
+                        <p class="text-sm ">octopus, fish, shrimp, calamari.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 30$</p> <button onclick="addToOrder('Fried fish', 19.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col col-span-1 ">
+                        <img src="../image/fries.jpg">
+                        <h3>French Fries</h3>
+                        <p class="text-sm ">slice of botato, Salt.</p>
+                        <div class="flex mt-2 justify-between ">
+                        <p class="p1">price: 5$</p> <button onclick="addToOrder('French Fries', 40.00)"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            
+                </div>
+                <button class="btn btn-third"><a href="#">ORDER NOW</a></button>
                 
             </div>
         </section>
         <!-- Menu Section End -->
         <!-- Daytime section start-->
         <section id="daytime">
-            <div class="container">
+            <div class="cont">
                 <div class="daytime-items">
                     <div class="daytime-item">
                         <img src="../image/breckfastIcon.png" alt="Breakfast">
@@ -328,7 +301,7 @@
         <!-- Gallery Section Start -->
         <section id="gallery">
             <div class="container">
-                <h2 class="text-black">Our Food Gallery</h2>
+                <h2 class="">COMMING SOON  </h2>
                 <div class="img-gallery">
                     <img src="../image/gallery1.jpeg" alt="gallery1">
                     <img src="../image/e99c963d776c8771c68b30e946cbbda42860ceef.jpg" alt="gallery2">
@@ -339,29 +312,6 @@
                 </div>
             </div>
         </section>
-        <!-- Gallary Section End -->
-        <!-- Contact Section Start -->
-        <!-- <section id="contact">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div>
-                            <h3>WORKING HOURS</h3>
-                            <p>8:00 am to 11:00 pm on Weekdays</p>
-                            <p>11:00 am to 1:00 Am on Weekends</p>
-                        </div>
-                        <div>
-                            <h3>FOLLOW US</h3>
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- Contact Section End -->
-         
         <script src="../JS/menu.js"> </script>
     
 </body>
