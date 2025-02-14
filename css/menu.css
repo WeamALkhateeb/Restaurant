@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Jaro:opsz@6..72&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ysabeau+SC:wght@1..1000&display=swap');
 
 * {
   margin: 0;
@@ -24,7 +25,9 @@ a {
 ul {
   list-style: none;
 }
-
+.content h1{
+  font-family: "Permanent Marker";
+}
 .container {
   max-width: 1100px;
   margin: auto;
@@ -80,6 +83,7 @@ header {
 
 nav ul {
   display: flex;
+  align-items: center;
   margin-right: 100px;
 }
 
@@ -89,7 +93,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  border-bottom: 2px solid #e4b95b;
+  border-bottom: 2px solid #FF9800;;
 }
 
 header .content {
@@ -313,7 +317,7 @@ header * {
 
 /* Gallery section start */
 #gallery {
-  background: url("../image/offer-background.jpg") center center/cover;
+  background: url("../img/offer-background.jpg") center center/cover;
   padding: 8rem 0 6rem;
 }
 #gallery h2 {

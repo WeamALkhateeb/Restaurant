@@ -98,14 +98,26 @@
                 <div class="title">
                     <h2>Our Special Menu</h2>
                     <p>Order two and get third for free</p>
+                        <!-- Search Bar-->
+                    <div class="controls">
+                        <input type="text" id="search" placeholder="Search by Name">
+                        <div class="order-sidebar">
+                            <h2>🛒 طلباتك</h2>
+                            <div id="order-items"></div>
+                            <hr>
+                            <p>$المجموع: <span id="total">0</span> </p>
+                        </div>
+                    
+                    </div>
                 </div>
                 <div class="menu-items">
-                    <div class="menu-items-left">
-                        <div class="menu-item">
+                    <div class="menu-item-left">
+                        <div class="menu-item" >
                             <img src="../image/food1.png" alt="LASAL Cheese">
                             <div>
                                 <h3>LASAL CHEESE <span class="primary-text">$18.00</span></h3>
                                 <p>pasta, cabbage, bell peppers, tomatoes, olives, cheese.</p>
+                                <button onclick="addToOrder('LASAL CHEESE', 18.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -113,20 +125,23 @@
                             <div>
                                 <h3>fried shrimp <span class="primary-text">$24.00</span></h3>
                                 <p>garlic, ginger, lemon, shrimp, coriander, barbecue sauce.</p>
+                                <button onclick="addToOrder('fried shrimp', 24.00)">add</button>
                             </div>
                         </div>
-                        <div class="menu-item">
+                        <div class="menu-item" >
                             <img src="../image/food3.png" alt="KOKTAIL JUCIE">
                             <div>
                                 <h3>fruit cocktail <span class="primary-text">$12.00</span></h3>
                                 <p>strawberries, kiwi, cherries, banana, cranberries, mil;, sugar.</p>
+                                <button onclick="addToOrder('fruit cocktail', 12.00)">add</button>
                             </div>
                         </div>
-                        <div class="menu-item">
+                        <div class="menu-item" >
                             <img src="../image/food4.png" alt="CAPO STEAK">
                             <div>
                                 <h3>grilled lamb chops <span class="primary-text">$60.00</span></h3>
                                 <p>olive oil, rosemary, salt, pepper, grilled vegetables.</p>
+                                <button onclick="addToOrder('grilled lamb chops', 60.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -134,6 +149,7 @@
                             <div>
                                 <h3>donuts <span class="primary-text">$8.00</span></h3>
                                 <p>fried donut dough filled with chocolate, strawberries, caramel.</p>
+                                <button onclick="addToOrder('donuts', 8.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -141,15 +157,17 @@
                             <div>
                                 <h3>VEGETABLE PIZZA <span class="primary-text">$18.00</span></h3>
                                 <p>pizza sauce, olives, mushrooms, corn, mozzarella cheese, peppers, basil.</p>
+                                <button onclick="addToOrder('VEGETABLE PIZZA', 18.00)">add</button>
                             </div>
                         </div>
                     </div>
-                    <div class="menu-items-right">
+                    <div class="menu-item-right">
                         <div class="menu-item">
                             <img src="../image/food7.jpeg" alt="KOFTA MEAT">
                             <div>
                                 <h3>VEGETABLE SOUP <span class="primary-text">$40.00</span></h3>
                                 <p>zucchini, onion, carrot, tomato, potato, chicken broth.</p>
+                                <button onclick="addToOrder('VEGETABLE SOUP', 40.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -157,6 +175,7 @@
                             <div>
                                 <h3>PANCAKE <span class="primary-text">$14.00</span></h3>
                                 <p>pancake batter with butter, chocolate, blueberries, honey, strawberries.</p>
+                                <button onclick="addToOrder('PANCAKE', 14.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -164,6 +183,7 @@
                             <div>
                                 <h3> TOAST <span class="primary-text">$6.00</span></h3>
                                 <p>toast with butter, blueberries, banana, cinnamon, honey.</p>
+                                <button onclick="addToOrder('TOAST', 6.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -171,6 +191,7 @@
                             <div>
                                 <h3>FRIED VEGETABLES <span class="primary-text">$14.00</span></h3>
                                 <p>cinnabon dough, butter, cinnamon, sweetened condensed milk, cream.</p>
+                                <button onclick="addToOrder('FRIED VEGETABLES', 14.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -178,6 +199,7 @@
                             <div>
                                 <h3>GRILLED STEAK <span class="primary-text">$20.00</span></h3>
                                 <p>fresh steak, roasted potatoes, rosemary, butter, salt, garlic.</p>
+                                <button onclick="addToOrder('GRILLED STEAK', 20.00)">add</button>
                             </div>
                         </div>
                         <div class="menu-item">
@@ -185,11 +207,13 @@
                             <div>
                                 <h3>seafood soup <span class="primary-text">$30.00</span></h3>
                                 <p>octopus, fish, shrimp, calamari, clams, garlic, butter, cooking cream.</p>
+                                <button onclick="addToOrder('seafood soup', 30.00)">add</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <button class="btn btn-third"><a href="#">EXPLORE FULL MENU</a></button>
+                
             </div>
         </section>
         <!-- Menu Section End -->
@@ -253,21 +277,12 @@
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                 </div>
             </div>
         </section>
         <!-- Contact Section End -->
-    
-    
-    
-    
+         
+        <script src="../JS/menu.js"> </script>
     
 </body>
 

@@ -67,7 +67,7 @@ header{
     letter-spacing: 8px;
     margin-bottom: 10px;
     font-weight: 400;
-    color: #FF9800;
+    color: #e4b95b;
     font-family: "Permanent Marker";
 }
 .home p {
@@ -166,7 +166,7 @@ header{
 }
 .services h2 {
     font-size: 32px;
-    color: #FF9800;
+    color: #e4b95b;
     margin-bottom: 20px;
 }
 .services p {
@@ -198,7 +198,7 @@ header{
 }
 .service-card h3 {
     font-size: 24px;
-    color: #FF9800;
+    color: #e4b95b;
     margin-bottom: 10px;
     margin-top: 15px;
 }
@@ -214,7 +214,7 @@ header{
 }
 .offers h2{
     font-size: 32px;
-    color: #FF9800;
+    color: #e4b95b;
     margin-bottom: 20px;
 }
 .offers p{
@@ -241,7 +241,7 @@ header{
 }
 .offer-card h3 {
     margin: 10px 0;
-    color: #FF9800;
+    color: #e4b95b;
 }
 .offer-card p {
     font-size: 14px;
@@ -256,7 +256,7 @@ header{
     cursor: pointer;
 }
 .offer-card button:hover {
-    background: #FF9800;
+    background: #e4b95b;
 }
 /*footer*/
 footer {
@@ -306,12 +306,12 @@ footer {
     height: 80px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid #ff6600;
+    border: 2px solid #e4b95b;;
     resize: none;
     background-color: #faca7e;
 }
 .footer-feedback button {
-    background: #ff6600;
+    background:  #e4b95b;;
     color: #222;
     border: none;
     padding: 10px 25px;
