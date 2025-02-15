@@ -3,7 +3,7 @@ let total = 0;
 // search bar function
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search');
-    const menuItems = document.querySelectorAll('.menu-item');
+    const menuItems = document.querySelectorAll('.card');
 
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.trim().toLowerCase();

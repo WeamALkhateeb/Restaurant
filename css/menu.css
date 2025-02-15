@@ -173,7 +173,7 @@ header * {
 #offers h2,
 #menu h2 {
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #about h2 {
@@ -184,6 +184,7 @@ header * {
   font-weight: 600;
   font-size: 14px;
   color: #9a9a9a;
+  
 }
 
 #about .about-content {
@@ -225,6 +226,7 @@ header * {
 #offers .title p {
   color: #fff;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 
 #offers .offers-items {
@@ -237,7 +239,7 @@ header * {
 
 #offers .offers-items img {
   width: 70%;
-  margin-left:50px;
+  margin:auto;
 }
 
 #offers .offers-items h3 {
@@ -247,6 +249,7 @@ header * {
 }
 #offers .offers-items i {
   color: #e4b95b;
+  margin-bottom: 15px;
 }
 #offers .offers-items i:hover {
   cursor: pointer;
@@ -335,30 +338,39 @@ header * {
 }
 
 #daytime .daytime-items {
-  display: flex;
-  justify-content: space-evenly;
+  padding: 3%;
+  justify-content: center;
   align-items: center;
-  height: 40vh;
 }
 
 #daytime .daytime-items h3 {
   font-size: 32px;
-  margin: 20px 0 10px;
+  margin: 20px -2px 10px;
 }
 
 #daytime .daytime-items p {
   font-weight: 500;
 }
+#daytime .daytime-item {
+  justify-content: center;
+  align-items: center;
+  margin:0 5% ;
+}
+#daytime .daytime-item img{
+  margin:auto;
+}
+
+
 /* Daytime section End */
 
 /* Gallery section start */
 #gallery {
-  background: url("../img/offer-background.jpg") center center/cover;
+  background: url("../image/offer-background.jpg") center center/cover fixed;
   padding: 8rem 0 6rem;
 }
 #gallery h2 {
   font-size: 40px;
-  color: #fff;
+  color: #e4b95b;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -388,52 +400,7 @@ header * {
   padding: 5rem 0;
 }
 
-#contact .container {
-  max-width: 900px;
-}
 
-#contact .contact-content {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-#contact .contact-info {
-  width: 50%;
-}
-
-#contact .contact-info div {
-  margin: 30px 0;
-  line-height: 1.7;
-}
-
-#contact .contact-info h3 {
-  font-size: 28px;
-  color: #e4b95b;
-  margin-bottom: 10px;
-}
-
-#contact .contact-info p {
-  color: #9a9a9a;
-}
-
-#contact .contact-info p i {
-  color: #e4b95b;
-  margin-right: 5px;
-}
-
-#contact .contact-info a i {
-  color: #fff;
-  background: #383848;
-  padding: 10px;
-  font-size: 20px;
-  border-radius: 50%;
-}
-
-#contact .contact-info a i:hover {
-  background-color: #e4b95b;
-  color: #e4b95b;
-}
 
 form {
   width: 50%;
@@ -458,48 +425,14 @@ form button {
   color: #fff;
 }
 
-/* Contact Section End */
-/* Footer Start */
-#footer {
-  background-color: #383848;
-  text-align: center;
-  color: #fff;
-  padding: 15px 0;
-  font-size: 14px;
-}
-/* Footer End */
-
 /* Responsiveness */
 /* Medium Screen + Tablet */
 @media (max-width: 1000px) {
-  #navbar img {
-    margin-left: 20px;
-  }
-
-  nav ul {
-    margin-right: 20px;
-  }
-
-  nav ul li a {
-    padding: 10px;
-  }
 
   header .content h1 {
     font-size: 28px;
   }
 
-  #about {
-    height: auto;
-    padding: 4rem 2rem;
-  }
-
-  #about .about-content p {
-    margin-right: 2rem;
-  }
-
-  #about img {
-    width: 250px;
-  }
 
   #offers .offers-items img {
     width: 150px;
@@ -508,24 +441,8 @@ form button {
   #offers .offers-items h3 {
     font-size: 18px;
   }
-
-  #menu .menu-items {
-    display: block;
-  }
-
-  #contact .contact-content {
-    flex-direction: column;
-  }
-
   /* Mobile Devices */
   @media (max-width: 600px) {
-    #navbar {
-      flex-direction: column;
-    }
-
-    #navbar img {
-      margin-bottom: 20px;
-    }
 
     header .content h1 {
       font-size: 18px;
@@ -533,18 +450,6 @@ form button {
 
     header .content p {
       font-size: 14px;
-    }
-
-    #about .about-content {
-      flex-direction: column;
-    }
-
-    #about .about-content a {
-      margin: 2rem 0;
-    }
-
-    #about img {
-      display: none;
     }
 
     #offers {
@@ -561,18 +466,12 @@ form button {
     }
 
     #daytime .daytime-items {
-      display: block;
       height: auto;
       padding: 30px 0;
     }
 
     #daytime .daytime-items .daytime-item {
       margin-top: 20px;
-    }
-
-    #contact .contact-info,
-    form {
-      width: 80%;
     }
   }
 }
