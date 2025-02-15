@@ -39,6 +39,18 @@ ul {
   border: 1px solid #fff;
   color: #f4f2ed;
 }
+.buttons{
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #f4f2ed;
+}
+.buttons:hover{
+  background: #e4b95b;
+}
 .btn {
   display: inline-block;
   padding: 15px 30px;
@@ -166,7 +178,7 @@ header * {
 #offers .title,
 #menu .title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
 }
 #about h2,
@@ -174,17 +186,6 @@ header * {
 #menu h2 {
   font-size: 40px;
   margin-bottom: 10px;
-}
-
-#about h2 {
-  color: #e4b95b;
-}
-
-#about .title p {
-  font-weight: 600;
-  font-size: 14px;
-  color: #9a9a9a;
-  
 }
 
 #about .about-content {
@@ -366,7 +367,7 @@ header * {
 /* Gallery section start */
 #gallery {
   background: url("../image/offer-background.jpg") center center/cover fixed;
-  padding: 8rem 0 6rem;
+  padding: 5rem 0 6rem;
 }
 #gallery h2 {
   font-size: 40px;
