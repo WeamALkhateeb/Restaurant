@@ -121,17 +121,6 @@ header * {
   z-index: 10;
 }
 
-/* Header End */
-
-/* About Start */
-
-#about {
-  height: 80vh;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .products {
   margin: 50px 0 50px 0;
   justify-content: center;
@@ -222,6 +211,7 @@ header * {
 
 #offers h2 {
   color: #e4b95b;
+
 }
 
 #offers .title p {
@@ -245,8 +235,10 @@ header * {
 
 #offers .offers-items h3 {
   font-size: 25px;
-  color: #fff;
+  color: #e4b95b;
   margin: 15px;
+  font-family: "Permanent Marker";
+
 }
 #offers .offers-items i {
   color: #e4b95b;
