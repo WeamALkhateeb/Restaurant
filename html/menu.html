@@ -80,15 +80,30 @@
                     <p>Order two and get third for free ❕</p>
 
                         <!-- Search Bar-->
-                        <input type="text" class="w-[300px]" id="search" placeholder="Search by Name 🍕🍔🍟">
-                    <div class="controls hidden">
-                        <div class="order-sidebar">
-                            <h2>Your Orders 🛒 </h2>
-                            <div id="order-items"></div>
-                            <hr>
-                            <p>Total: <span id="total">0</span>$ </p>
+                        <input type="text" class="w-[300px]" id="search" placeholder="Search by Name 🍕🍔🍟"> <button id="orders" class="buttons">🛒</button>
+                    <div id="formContainer" class="hidden ">
+                        <div id="controls " class="controls">
+                            <div class="order-sidebar p-5">
+                                <h2>Your Orders 🛒 </h2>
+                                <div id="order-items"></div>
+                                <hr>
+                                <h2>Total: <span id="total">0</span>$ </h2>
+                            </div>
+                        
                         </div>
-                    
+                        <form id="orderForm">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" id="phoneNumber" minlength="7" maxlength="10" name="phoneNumber" required>
+                
+                            <label for="location">Location:</label>
+                            <input type="text" id="location" name="location" required>
+                
+                            <button class="buttons" type="submit">Order</button>
+                            <button class="buttons" type="button" id="cancelBtn">Cancel</button>
+                        </form>
                     </div>
                 </div>
                 <div id="cate" class="flex grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 items-center justify-center gap-6">
@@ -248,9 +263,12 @@
                 
             
                 </div>
-                <button class="btn btn-third"><a href="#">ORDER NOW</a></button>
+                <button class="btn btn-third" id="showFormBtn"><a href="#">ORDER NOW</a></button>
+           
+            
                 
             </div>
+
         </section>
         <!-- Menu Section End -->
         <!-- Daytime section start-->

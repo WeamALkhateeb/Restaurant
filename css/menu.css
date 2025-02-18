@@ -418,6 +418,51 @@ form button {
   color: #fff;
 }
 
+#formContainer {
+  border: 1px solid #383838;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #6b6b6b;
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  padding: 20px; /* لون الخلفية */
+  color: white; /* لون النص */
+  position: fixed;
+  top: 10px;
+  left: 25%;
+  z-index: 1000;
+  border-radius: 5px;
+  width: 700px;
+  /* cursor: move; */
+}
+#formContainer input {
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+}
+#formContainer label,button {
+  margin-left: 20px;
+}
+.hidden {
+  display: none;
+}
+.flexed{
+  display: flex;
+}
+.order-item{
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  padding: 3px;
+ background-color: #e4b95b;
+ margin-bottom: 5px;
+
+}
 /* Responsiveness */
 /* Medium Screen + Tablet */
 @media (max-width: 1000px) {

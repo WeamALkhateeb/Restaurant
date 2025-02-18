@@ -42,3 +42,93 @@ total -= order[index].price;
 order.splice(index, 1);
 updateOrderDisplay();
 }
+
+      document.getElementById('showFormBtn').addEventListener('click', function() {
+                document.getElementById('formContainer').classList.remove('hidden');
+            });
+            document.getElementById('showFormBtn').addEventListener('click', function() {
+                document.getElementById('formContainer').classList.add('flexed');
+            });
+
+            document.getElementById('orders').addEventListener('click', function() {
+                document.getElementById('formContainer').classList.remove('hidden');
+            });
+            document.getElementById('orders').addEventListener('click', function() {
+                document.getElementById('formContainer').classList.add('flexed');
+            });
+            
+            document.getElementById('cancelBtn').addEventListener('click', function() {
+                document.getElementById('formContainer').classList.add('hidden');
+            });
+            document.getElementById('cancelBtn').addEventListener('click', function() {
+                document.getElementById('formContainer').classList.remove('flexed');
+            });
+            
+            // Optional: Handle form submission
+            document.getElementById('orderForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                alert('Form submitted!'); // You can replace this with your form handling logic
+                document.getElementById('formContainer').classList.add('hidden'); // Hide the form after submission
+            });
+
+//             dragElement(document.getElementById("formContainer"));
+
+// function dragElement(el) {
+//     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+//     el.onmousedown = dragMouseDown;
+
+//     function dragMouseDown(e) {
+//         e = e || window.event;
+//         e.preventDefault();
+//         // الحصول على موضع الماوس عند الضغط
+//         pos3 = e.clientX;
+//         pos4 = e.clientY;
+//         document.onmouseup = closeDragElement;
+//         document.onmousemove = elementDrag;
+//     }
+
+//     function elementDrag(e) {
+//         e = e || window.event;
+//         e.preventDefault();
+//         // حساب الموضع الجديد
+//         pos1 = pos3 - e.clientX;
+//         pos2 = pos4 - e.clientY;
+//         pos3 = e.clientX;
+//         pos4 = e.clientY;
+
+//         // تحديث موضع التنبيه مع التحقق من الحدود
+//         let newTop = el.offsetTop - pos2;
+//         let newLeft = el.offsetLeft - pos1;
+
+//         // الحصول على عرض وارتفاع الشاشة
+//         const screenWidth = window.innerWidth;
+//         const screenHeight = window.innerHeight;
+
+//         // الحصول على عرض وارتفاع التنبيه
+//         const alertWidth = el.offsetWidth;
+//         const alertHeight = el.offsetHeight;
+
+//         // التحقق من الحدود الأفقية
+//         if (newLeft < 0) {
+//             newLeft = 0;
+//         } else if (newLeft + alertWidth > screenWidth) {
+//             newLeft = screenWidth - alertWidth;
+//         }
+
+//         // التحقق من الحدود الرأسية
+//         if (newTop < 0) {
+//             newTop = 0;
+//         } else if (newTop + alertHeight > screenHeight) {
+//             newTop = screenHeight - alertHeight;
+//         }
+
+//         // el.style.top = newTop + "px";
+//         el.style.left = newLeft + "px";
+//     }
+
+//     function closeDragElement() {
+//         // إيقاف السحب عند الإفلات
+//         document.onmouseup = null;
+//         document.onmousemove = null;
+//     }
+// }
