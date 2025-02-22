@@ -436,6 +436,76 @@ form button {
   width: 700px;
   /* cursor: move; */
 }
+
+.btn-send{
+  border: 0;
+  background-color: #383848 ;
+  border-radius: 50px;
+  padding: 10px 50px;
+  cursor: pointer;
+
+}
+
+.bill{
+  background-color: #f4f2ed;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgb(87, 77, 77); 
+  padding: 1em;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  text-align: center;
+  width: 400px;
+  transform: translate(-50%,-50%);
+  transition: all .5s;
+  opacity: 0;
+
+}
+
+
+.bill.open{
+    opacity:1;
+    top: 50%;
+}
+
+.bill img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: -50px;
+}
+
+.bill h2{
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bill .btn-close{
+    width: 100px;
+    border-radius: 50px;
+    border: 0;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #DDA74F;
+    color: #383848;
+    cursor: pointer;
+    margin-right: 90px;
+
+
+
+}
+
+.bill .btn-stabilizing{
+  width: 100px;
+  border-radius: 50px;
+  border: 0;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #DDA74F;
+  color: #383848;
+  cursor: pointer;
+}
 #formContainer input {
   border: 1px solid #ffffff;
   border-radius: 15px;

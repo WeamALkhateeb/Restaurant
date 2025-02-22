@@ -24,7 +24,7 @@
         <div class="content">
             <h1>Welcome To <span class="primary-text"> Royal Food </span> Menu</h1>
             <p>Here you can find Most delicacies food in the world</p>
-            
+
             <a href="#menu" class="btn btn-primary">All menu</a>
         </div>
     </header>
@@ -40,30 +40,32 @@
                 </div>
                 <div class="offers-items grid grid-cols-4">
                     <div class=" items-center col-span-1">
-                        <img   src="../image/offer1.png" alt="Quattro Pasta">
+                        <img src="../image/offer1.png" alt="Quattro Pasta">
                         <div>
                             <h3>TOMATO PASTA</h3>
-                            <p >Pasta with tomato sauce, cherry tomatoes and parsley.</p>
-                            
+                            <p>Pasta with tomato sauce, cherry tomatoes and parsley.</p>
+
                             <p><del>$ 20.00</del> <span class="primary-text">$12.00</span></p>
-                            <button  onclick="addToOrder('TOMATO PASTA', 12.00)"><i class="fa-solid fa-plus"></i></button>
-                            
+                            <button onclick="addToOrder('TOMATO PASTA', 12.00)"><i
+                                    class="fa-solid fa-plus"></i></button>
+
                         </div>
                     </div>
                     <div class="items-center col-span-1">
                         <img src="../image/offer2.png" alt="Vegertarian Pasta">
-                        <div >
+                        <div>
                             <h3>Vegertarian Pasta</h3>
-                            <p >pasta with grilled vegetables, tomatoes, cheese, olives, lettuce, broccoli.</p>
+                            <p>pasta with grilled vegetables, tomatoes, cheese, olives, lettuce, broccoli.</p>
                             <p><del>$ 15.00</del> <span class="primary-text">$10.00</span></p>
-                            <button onclick="addToOrder('Vegertarian Pasta', 10.00)"><i class="fa-solid fa-plus"></i> </button>
+                            <button onclick="addToOrder('Vegertarian Pasta', 10.00)"><i class="fa-solid fa-plus"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="items-center col-span-1">
-                        <img  src="../image/offer3.png" alt="Quattro Pasta">
+                        <img src="../image/offer3.png" alt="Quattro Pasta">
                         <div>
                             <h3>Basil Pasta</h3>
-                            <p >pasta with tomato sauce, grilled halloumi cheese and fresh basil.</p>
+                            <p>pasta with tomato sauce, grilled halloumi cheese and fresh basil.</p>
                             <p><del>$ 25.00</del> <span class="primary-text">$15.00</span></p>
                             <button onclick="addToOrder('Basil Pasta', 15.00)"><i class="fa-solid fa-plus"></i></button>
                         </div>
@@ -79,8 +81,20 @@
                     <h2>Our Special Menu </h2>
                     <p>Order two and get third for free ❕</p>
 
-                        <!-- Search Bar-->
-                        <input type="text" class="w-[300px]" id="search" placeholder="Search by Name 🍕🍔🍟"> <button id="orders" class="buttons">🛒</button>
+
+                    <!-- added choices for searching-->
+
+                    <div class="title">
+
+                        <select id="searchByApi" style="color:#757496">
+                            <option value="searchByName">search by name</option>
+                            <option value="searchByChar">search by first character</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Bar-->
+                    <input type="text" class="w-[300px]" id="search" placeholder="Search by Name 🍕🍔🍟"> <button
+                        id="orders" class="buttons">🛒</button>
                     <div id="formContainer" class="hidden ">
                         <div id="controls " class="controls">
                             <div class="order-sidebar p-5">
@@ -89,184 +103,189 @@
                                 <hr>
                                 <h2>Total: <span id="total">0</span>$ </h2>
                             </div>
-                        
+
                         </div>
                         <form id="orderForm">
                             <label for="fullName">Full Name:</label>
                             <input type="text" id="fullName" name="fullName" required>
-                
+
                             <label for="phoneNumber">Phone Number:</label>
                             <input type="tel" id="phoneNumber" minlength="7" maxlength="10" name="phoneNumber" required>
-                
+
                             <label for="location">Location:</label>
                             <input type="text" id="location" name="location" required>
-                
-                            <button class="buttons" type="submit">Order</button>
+
+                            <button class="buttons" onclick="show_pup()">send</button>
                             <button class="buttons" type="button" id="cancelBtn">Cancel</button>
+                            <div class="window">
+
+                                <div class="bill" id="pup">
+                                    <img src="./logo.png" >
+                                    <h2> welcome to our resstaurant! </h2>
+                                    <p>would you like to confirm your order?</p>
+                                    <button class="btn-close" onclick="hide_pup()">close</button>
+                                    <button class="btn-stabilizing" onclick="hide_pup()">send</button>
+                            
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <div id="cate" class="flex grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 items-center justify-center gap-6">
-                    <button class="buttons">all</button>
-                    <button class="buttons">appitizers</button>
-                    <button class="buttons">sea food</button>
-                    <button class="buttons">pizza</button>
-                    <button class="buttons">meat</button>
-                    <button class="buttons">chicken</button>
-
+                <!-- ^^^^^^^^^^^^^^^^^^^^ -->
+                <!-- here we added a categories using api -->
+                <div id="cate"
+                    class="flex grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 items-center justify-center gap-6">
 
                 </div>
-                <div class="products grid flex  mb-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
-                    <div class="card flex flex-col  col-span-1 p-5">
-                        <img src="../image/ceaser1.jpg">
-                        <h3>Ceaser Salad</h3>
-                        <p class="text-sm ">Romaine Lettuce,Caesar Dressing, Croutons,Parmesan Cheese.</p>
+                <!-- ^^^^^^^^^^^^^^^^^^^^ -->
+                <!-- recomended food button using api-->
+                <div id="" class="">
+                    <button id="recomended" class="buttons">recommended</button>
+                    <div id="hiddenRecommended" class="card flex flex-col  col-span-1 p-5 hidden">
+                        <img id="imageRecommended" src="">
+                        <h3 id="titleRecommended"></h3>
+                        <p class="text-sm " id="textRecommended"></p>
                         <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 10$</p> 
-                        <button onclick="addToOrder('Ceaser Salad', 10.00)"><i class="fa-solid fa-plus"></i></button>
+                            <p class="p1">price: 10$</p>
+                            <button onclick="addToOrder('Ceaser Salad', 10.00)"><i
+                                    class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
-                </div>
-                <div class="card flex flex-col  col-span-1 p-5">
-                    <img src="../image/pizza1.jpg">
-                    <h3>Pizza</h3>
-                    <p class="text-sm ">pizza sauce, olives, mushrooms, corn, mozzarella cheese, peppers.</p>
-                    <div class="flex mt-2 justify-between ">
-                    <p class="p1">price: 15$</p> <button onclick="addToOrder('Pizza', 15.00)"><i class="fa-solid fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="card flex flex-col  col-span-1 p-5">
-                <img src="../image/pasta.jpg">
-                <h3>Pasta</h3>
-                <p class="text-sm ">tomato sauce, onion, meat, corn, mozzarella cheese, peppers.</p>
-                <div class="flex mt-2 justify-between ">
-                <p class="p1">price: 20$</p> <button onclick="addToOrder('Pasta', 20.00)"><i class="fa-solid fa-plus"></i></button>
-            </div>
-        </div>
-            <div class="card flex flex-col  col-span-1 p-5 ">
-                <img src="../image/burger1.jpg">
-                <h3>Beef Burger</h3>
-                <p class="text-sm "> Beef,  Bun, mozzarella cheese, Tomato, Onion, Bacon.</p>
-                <div class="flex mt-2 justify-between ">
-                <p class="p1">price: 17$</p> <button onclick="addToOrder('Beef Burger', 17.00)"><i class="fa-solid fa-plus"></i></button>
-            </div>
-        </div>
-                </div>
-                <div class="products grid flex lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-5 gap-6">
+                 
+                    <div id="searchByFirstChar"class="products grid flex  mb-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+                        <div id="searchhidden" class="hidden">
+                            <div class="card flex flex-col  col-span-1 p-5">
+                                <img id="searchImg" src="">
+                                <h3 id="searchTitle"></h3>
+                                <p id="searchText" class="text-sm "></p>
+                                <div class="flex mt-2 justify-between ">
+                                    <p class="p1">price: 10$</p>
+                                    <button onclick="addToOrder('Ceaser Salad', 10.00)"><i
+                                            class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 mx-auto ">
+                            <img src="../image/saladpasta.jpg">
+                            <h3>Pasta Salad</h3>
+                            <p class="text-sm ">pasta, cabbage, bell peppers, tomatoes, olives, cheese.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 11$</p> <button onclick="addToOrder('Pasta Salad', 11.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/shrimp.jpg">
+                            <h3>fried shrimp</h3>
+                            <p class="text-sm ">garlic, ginger, lemon, shrimp, coriander, barbecue sauce.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 20$</p> <button onclick="addToOrder('fried shrimp', 20.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/steak.jpg">
+                            <h3>GRILLED STEAK</h3>
+                            <p class="text-sm ">fresh steak, roasted potatoes, rosemary, butter, salt, garlic.
+                            </p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 24$</p> <button onclick="addToOrder('GRILLED STEAK', 24.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/seasoap.jpg">
+                            <h3>Sea food Soup</h3>
+                            <p class="text-sm ">octopus, fish, shrimp, calamari, clams, garlic, butter, cooking
+                                cream.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 22$</p> <button onclick="addToOrder('Sea food Soup', 22.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 mx-auto ">
+                            <img src="../image/soap1.jpg">
+                            <h3>VEGETABLE SOUP</h3>
+                            <p class="text-sm ">pzucchini, onion, carrot, tomato, potato, beansو chicken broth.
+                            </p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 9$</p> <button onclick="addToOrder('VEGETABLE SOUP', 9.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/salad.jpg">
+                            <h3>Salad</h3>
+                            <p class="text-sm ">Tomato, ginger, lemon, cucumber, cabbage, avocado, oil.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 4$</p> <button onclick="addToOrder('Salad', 20.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/bbq.jpg">
+                            <h3>BBQ</h3>
+                            <p class="text-sm ">botato, Shish, slice of meat, tomato, eggplantو wings.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 40$</p> <button onclick="addToOrder('BBQ', 40.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/pepperoni.jpg">
+                            <h3>Pizza Pepperoni</h3>
+                            <p class="text-sm ">octopus, fish, shrimp, calamari, clams, garlic, butter, cooking
+                                cream.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 19$</p> <button onclick="addToOrder('Pizza Pepperoni', 19.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 mx-auto ">
+                            <img src="../image/wings1.jpg">
+                            <h3>Chicken Wings</h3>
+                            <p class="text-sm "> Mustard, Barbecue sauce, chicken wings, onion.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 19$</p> <button onclick="addToOrder('Chicken Wings', 9.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/crispy1.jpg">
+                            <h3>Crispy</h3>
+                            <p class="text-sm ">Tomato, ginger, lemon, cucumber, cabbage, avocado, oil.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 14$</p> <button onclick="addToOrder('Crispy', 14.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/FISH.jpg">
+                            <h3>Fried fish</h3>
+                            <p class="text-sm ">octopus, fish, shrimp, calamari.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 30$</p> <button onclick="addToOrder('Fried fish', 19.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card flex flex-col col-span-1 ">
+                            <img src="../image/fries.jpg">
+                            <h3>French Fries</h3>
+                            <p class="text-sm ">slice of botato, Salt.</p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 5$</p> <button onclick="addToOrder('French Fries', 40.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
                     
-                    <div class="card flex flex-col col-span-1 mx-auto ">
-                        <img src="../image/saladpasta.jpg">
-                        <h3>Pasta Salad</h3>
-                        <p class="text-sm ">pasta, cabbage, bell peppers, tomatoes, olives, cheese.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 11$</p> <button onclick="addToOrder('Pasta Salad', 11.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/shrimp.jpg">
-                        <h3>fried shrimp</h3>
-                        <p class="text-sm ">garlic, ginger, lemon, shrimp, coriander, barbecue sauce.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 20$</p> <button onclick="addToOrder('fried shrimp', 20.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/steak.jpg">
-                        <h3>GRILLED STEAK</h3>
-                        <p class="text-sm ">fresh steak, roasted potatoes, rosemary, butter, salt, garlic.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 24$</p> <button onclick="addToOrder('GRILLED STEAK', 24.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/seasoap.jpg">
-                        <h3>Sea food Soup</h3>
-                        <p class="text-sm ">octopus, fish, shrimp, calamari, clams, garlic, butter, cooking cream.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 22$</p> <button onclick="addToOrder('Sea food Soup', 22.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="products grid flex lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-5 gap-6">
-                    
-                    <div class="card flex flex-col col-span-1 mx-auto ">
-                        <img src="../image/soap1.jpg">
-                        <h3>VEGETABLE SOUP</h3>
-                        <p class="text-sm ">pzucchini, onion, carrot, tomato, potato, beansو chicken broth.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 9$</p> <button onclick="addToOrder('VEGETABLE SOUP', 9.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/salad.jpg">
-                        <h3>Salad</h3>
-                        <p class="text-sm ">Tomato, ginger, lemon, cucumber, cabbage, avocado, oil.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 4$</p> <button onclick="addToOrder('Salad', 20.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/bbq.jpg">
-                        <h3>BBQ</h3>
-                        <p class="text-sm ">botato, Shish, slice of meat, tomato, eggplantو wings.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 40$</p> <button onclick="addToOrder('BBQ', 40.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/pepperoni.jpg">
-                        <h3>Pizza Pepperoni</h3>
-                        <p class="text-sm ">octopus, fish, shrimp, calamari, clams, garlic, butter, cooking cream.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 19$</p> <button onclick="addToOrder('Pizza Pepperoni', 19.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="products grid flex lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-5 gap-6">
-                    
-                    <div class="card flex flex-col col-span-1 mx-auto ">
-                        <img src="../image/wings1.jpg">
-                        <h3>Chicken Wings</h3>
-                        <p class="text-sm ">  Mustard, Barbecue sauce, chicken wings, onion.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 19$</p> <button onclick="addToOrder('Chicken Wings', 9.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/crispy1.jpg">
-                        <h3>Crispy</h3>
-                        <p class="text-sm ">Tomato, ginger, lemon, cucumber, cabbage, avocado, oil.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 14$</p> <button onclick="addToOrder('Crispy', 14.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/FISH.jpg">
-                        <h3>Fried fish</h3>
-                        <p class="text-sm ">octopus, fish, shrimp, calamari.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 30$</p> <button onclick="addToOrder('Fried fish', 19.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="card flex flex-col col-span-1 ">
-                        <img src="../image/fries.jpg">
-                        <h3>French Fries</h3>
-                        <p class="text-sm ">slice of botato, Salt.</p>
-                        <div class="flex mt-2 justify-between ">
-                        <p class="p1">price: 5$</p> <button onclick="addToOrder('French Fries', 40.00)"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            
                 </div>
                 <button class="btn btn-third" id="showFormBtn"><a href="#">ORDER NOW</a></button>
-           
-            
-                
+
+
+
             </div>
 
         </section>
@@ -276,22 +295,22 @@
             <div class="container p-3">
                 <div class="daytime-items grid flex md:grid-cols-4 grid-col-1">
                     <div class="daytime-item col-span-1 ">
-                        <img src="../image/breckfastIcon.png" alt="Breakfast"> 
+                        <img src="../image/breckfastIcon.png" alt="Breakfast">
                         <h3>Breakfast</h3>
                         <p>8:00 am to 10:00 am</p>
                     </div>
                     <div class="daytime-item col-span-1">
-                        <img  src="../image/lunchIcon.png" alt="Lunch">
+                        <img src="../image/lunchIcon.png" alt="Lunch">
                         <h3>Lunch</h3>
                         <p>4:00 pm to 7:00 pm</p>
                     </div>
                     <div class="daytime-item col-span-1">
-                        <img  src="../image/dinnerIcon.png" alt="Dinner">
+                        <img src="../image/dinnerIcon.png" alt="Dinner">
                         <h3>Dinner</h3>
                         <p>9:00 pm to 1:00 Am</p>
                     </div>
                     <div class="daytime-item col-span-1">
-                        <img  src="../image/dessertIcon.png" alt="dessert">
+                        <img src="../image/dessertIcon.png" alt="dessert">
                         <h3>Dessert</h3>
                         <p>Comming soon</p>
                     </div>
@@ -302,11 +321,11 @@
         <!-- Gallery Section Start -->
         <section id="gallery">
             <div class="container cont">
-                <h2 >COMMING SOON  </h2>
+                <h2>COMMING SOON </h2>
                 <div class="img-gallery">
                     <img src="../image/48556-طريقة-عمل-السينابون-(3).jpg" alt="gallery1">
                     <img src="../image/image.png" alt="gallery3">
-                    <img  src="../image/cake.jpg" alt="gallery4">
+                    <img src="../image/cake.jpg" alt="gallery4">
                     <img src="../image/waffel1.jpg" alt="gallery5">
                     <img src="../image/saladfruit.jpg" alt="gallery6">
                     <img src="../image/cakes.jpg" alt="gallery5">
@@ -315,7 +334,7 @@
             </div>
         </section>
         <script src="../js/menu.js"> </script>
-    
+
 </body>
 
 </html>
