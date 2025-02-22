@@ -516,6 +516,10 @@ form button {
   cursor: pointer;
   margin-left: 20px;
 }
+#order-items{
+  overflow: auto;
+  max-height: 200px;
+}
 #formContainer label,button {
   margin-left: 20px;
 }

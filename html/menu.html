@@ -127,7 +127,7 @@
                                     <button class="btn-stabilizing" onclick="hide_pup()">send</button>
                             
                                 </div>
-                            </div>
+                               </div>
                         </form>
                     </div>
                 </div>
@@ -141,18 +141,19 @@
                 <!-- recomended food button using api-->
                 <div id="" class="">
                     <button id="recomended" class="buttons">recommended</button>
-                    <div id="hiddenRecommended" class="card flex flex-col  col-span-1 p-5 hidden">
-                        <img id="imageRecommended" src="">
-                        <h3 id="titleRecommended"></h3>
-                        <p class="text-sm " id="textRecommended"></p>
-                        <div class="flex mt-2 justify-between ">
-                            <p class="p1">price: 10$</p>
-                            <button onclick="addToOrder('Ceaser Salad', 10.00)"><i
-                                    class="fa-solid fa-plus"></i></button>
-                        </div>
-                    </div>
+
                  
                     <div id="searchByFirstChar"class="products grid flex  mb-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+                        <div id="hiddenRecommended" class="card flex flex-col  col-span-1 p-5 hidden">
+                            <img id="imageRecommended" src="">
+                            <h3 id="titleRecommended"></h3>
+                            <p class="text-sm " id="textRecommended"></p>
+                            <div class="flex mt-2 justify-between ">
+                                <p class="p1">price: 10$</p>
+                                <button onclick="addToOrder('Ceaser Salad', 10.00)"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
                         <div id="searchhidden" class="hidden">
                             <div class="card flex flex-col  col-span-1 p-5">
                                 <img id="searchImg" src="">
